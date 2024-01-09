@@ -210,11 +210,38 @@ xnoremap <silent> <Space> <Nop>
 nnoremap <expr> <silent> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
+" Remap Opening New Tabs
+nnoremap <C-t> :vertical terminal<CR>
+nnoremap <C-r> :term<CR>
+
 " [[ Tab Movement Remaped ]]
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+
+" Map Ctrl+c to copy to system clipboard in visual mode
+vnoremap <C-c> "+y
+
+" Map Ctrl+v to paste from system clipboard in normal and visual mode
+nnoremap <C-v> "+p
+vnoremap <C-v> "+p
+
+" Map Ctrl+V to paste from system clipboard (force characterwise) in visual mode
+vnoremap <C-V> "+P
+
+" Insert Keymapping for auto close brackets
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+
+" Insert Keymapping - upon hitting enter in bracket, back bracket an extra
+" line. i.e. open up function def
+inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
+
+" NERDTree KeyMappings
+nnoremap <C-o> :NERDTreeToggle<CR>
+nnoremap <C-p> :NERDTreeFind<CR>
 
 " [[ Configure plugins ]]
 " Set colorscheme
