@@ -40,12 +40,19 @@ call plug#begin()
 " Git related plugins
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 
 " Detect tabstop and shiftwidth automatically
 Plug 'tpope/vim-sleuth'
 
 " NOTE: This is where your plugins related to LSP can be installed.
 "  The configuration is done below. Search for lsp to find it below.
+
+" Install surround
+Plug 'tpope/vim-surround'
+
+" Install tmuxline
+Plug 'edkolev/tmuxline.vim'
 
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
@@ -76,6 +83,14 @@ Plug 'tpope/vim-commentary'
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" NERDTree
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+
+" vimspector debugger
+Plug 'puremourning/vimspector'
 
 call plug#end()
 
@@ -148,7 +163,7 @@ set mouse=a
 " Sync clipboard between OS and Neovim.
 "  Remove this option if you want your OS clipboard to remain independent.
 "  See `:help 'clipboard'`
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " Enable break indent
 set breakindent
@@ -195,6 +210,11 @@ xnoremap <silent> <Space> <Nop>
 nnoremap <expr> <silent> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
+" [[ Tab Movement Remaped ]]
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 " [[ Configure plugins ]]
 " Set colorscheme
