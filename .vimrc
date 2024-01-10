@@ -258,6 +258,12 @@ inoremap { {}<Left>
 " line. i.e. open up function def
 inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
 
+" Indent selected lines to the right
+vnoremap <Tab> >gv
+
+" Unindent selected lines to the left
+vnoremap <S-Tab> <gv
+
 " NERDTree KeyMappings
 nnoremap <C-o> :NERDTreeToggle<CR>
 nnoremap <C-p> :NERDTreeFind<CR>
