@@ -51,9 +51,6 @@ Plug 'tpope/vim-sleuth'
 " Install surround
 Plug 'tpope/vim-surround'
 
-" Install tmuxline
-Plug 'edkolev/tmuxline.vim'
-
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
 " Install language servers and configure them for vim-lsp
@@ -212,6 +209,12 @@ nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 nnoremap <C-s> :tabnew
 nnoremap <C-t> :vertical botright terminal<CR>
 nnoremap <C-r> :botright term<CR>
+
+" Remap Split Resizing Tools
+nnoremap <C-Left> :vertical resize -5<CR>
+nnoremap <C-Right> :vertical resize +5<CR>
+nnoremap <C-Up> :resize -5<CR>
+nnoremap <C-Down> :resize +5<CR>
 
 " [[ Tab Movement Remaped ]]
 nnoremap <C-j> <C-W>j
