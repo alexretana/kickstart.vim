@@ -208,7 +208,8 @@ xnoremap <silent> <Space> <Nop>
 nnoremap <expr> <silent> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
-" Remap Opening New Tabs
+" Remap Opening New Tabs and Splits
+nnoremap <C-s> :tabnew
 nnoremap <C-t> :vertical botright terminal<CR>
 nnoremap <C-r> :botright term<CR>
 
