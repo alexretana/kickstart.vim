@@ -262,6 +262,12 @@ colorscheme onedark
 " Characters to render for indentation guide
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
+"Set default unicode symbols
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.dirty='⚡'
 
 " [[ Configure vim-which-key ]]
 call which_key#register('<Space>', "g:which_key_map")
@@ -392,6 +398,13 @@ augroup lsp_install
   " call s:on_lsp_buffer_enabled only for languages that has the server registered.
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+"Add AutoSave if file opened is in a git repo
+autocmd BufEnter * if system('git rev-parse --is-inside-work-tree >/dev/null 2>&1') ==# '0'
+  \ | set autowrite
+  \ | else
+  \ | set noautowrite
+  \ | endif
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
