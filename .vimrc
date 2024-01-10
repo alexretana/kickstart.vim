@@ -155,12 +155,6 @@ set number
 " Enable mouse mode
 set mouse=a
 
-" Map Ctrl + mouse wheel for font resizing
-nnoremap <C-ScrollWheelUp>   :set guifont+=2<CR>
-nnoremap <C-ScrollWheelDown> :set guifont-=2<CR>
-
-tnoremap <C-ScrollWheelUp>   :set guifont+=2<CR>
-tnoremap <C-ScrollWheelDown> :set guifont-=2<CR>
 
 " Sync clipboard between OS and Neovim.
 "  Remove this option if you want your OS clipboard to remain independent.
@@ -218,15 +212,15 @@ nnoremap <C-s> :vertical botright terminal<CR>
 nnoremap <C-i> :botright term<CR>
 
 " Remap Split Resizing Tools
-nnoremap <C-Left> :vertical resize +2<CR>
-nnoremap <C-Right> :vertical resize -2<CR>
-nnoremap <C-Up> :resize -2<CR>
-nnoremap <C-Down> :resize +2<CR>
+nnoremap <silent> <C-Left> :vertical resize +2<CR>
+nnoremap <silent> <C-Right> :vertical resize -2<CR>
+nnoremap <silent> <C-Up> :resize -2<CR>
+nnoremap <silent> <C-Down> :resize +2<CR>
 
-tnoremap <C-Left> :vertical resize +2<CR>
-tnoremap <C-Right> :vertical resize -2<CR>
-tnoremap <C-Up> :resize -2<CR>
-tnoremap <C-Down> :resize +2<CR>
+tnoremap <C-Left>   <C-w><
+tnoremap <C-Right>  <C-w>>
+tnoremap <C-Up>     <C-w>+
+tnoremap <C-Down>   <C-w>-
 
 " [[ Tab Movement Remaped ]]
 nnoremap <C-j> <C-W>j
