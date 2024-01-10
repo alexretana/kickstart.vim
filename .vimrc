@@ -155,6 +155,13 @@ set number
 " Enable mouse mode
 set mouse=a
 
+" Map Ctrl + mouse wheel for font resizing
+nnoremap <C-ScrollWheelUp>   :set guifont+=2<CR>
+nnoremap <C-ScrollWheelDown> :set guifont-=2<CR>
+
+tnoremap <C-ScrollWheelUp>   :set guifont+=2<CR>
+tnoremap <C-ScrollWheelDown> :set guifont-=2<CR>
+
 " Sync clipboard between OS and Neovim.
 "  Remove this option if you want your OS clipboard to remain independent.
 "  See `:help 'clipboard'`
