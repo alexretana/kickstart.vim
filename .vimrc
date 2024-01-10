@@ -89,8 +89,6 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
-" vimspector debugger
-Plug 'puremourning/vimspector'
 
 call plug#end()
 
@@ -304,6 +302,11 @@ inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 
 " <Tab> triggers Omni completion (<C-x><C-o>) in a coding context
 let g:SuperTabDefaultCompletionType = "context"
+
+" [[ Configure NERDTree ]]
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " [[ Configure LSP ]]
 " NOTE: Install new language server using `:LspInstallServer` in the filetype
