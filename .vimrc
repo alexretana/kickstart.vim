@@ -207,7 +207,7 @@ nnoremap <expr> <silent> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
 " Remap Opening New Tabs and Splits
-nnoremap <C-t> :tabnew
+nnoremap <C-t> :tabnew 
 nnoremap <C-s> :vertical botright terminal<CR>
 nnoremap <C-i> :botright term<CR>
 
@@ -217,8 +217,8 @@ nnoremap <silent> <C-Right> :vertical resize -2<CR>
 nnoremap <silent> <C-Up> :resize -2<CR>
 nnoremap <silent> <C-Down> :resize +2<CR>
 
-tnoremap <C-Left>   <C-w><
-tnoremap <C-Right>  <C-w>>
+tnoremap <C-Left>   <C-w>>
+tnoremap <C-Right>  <C-w><
 tnoremap <C-Up>     <C-w>+
 tnoremap <C-Down>   <C-w>-
 
@@ -320,9 +320,6 @@ inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 let g:SuperTabDefaultCompletionType = "context"
 
 " [[ Configure NERDTree ]]
-" Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
