@@ -206,15 +206,15 @@ nnoremap <expr> <silent> k v:count == 0 ? 'gk' : 'k'
 nnoremap <expr> <silent> j v:count == 0 ? 'gj' : 'j'
 
 " Remap Opening New Tabs and Splits
-nnoremap <C-s> :tabnew
-nnoremap <C-t> :vertical botright terminal<CR>
-nnoremap <C-r> :botright term<CR>
+nnoremap <C-t> :tabnew
+nnoremap <C-s> :vertical botright terminal<CR>
+nnoremap <C-i> :botright term<CR>
 
 " Remap Split Resizing Tools
-nnoremap <C-Left> :vertical resize -5<CR>
-nnoremap <C-Right> :vertical resize +5<CR>
-nnoremap <C-Up> :resize -5<CR>
-nnoremap <C-Down> :resize +5<CR>
+nnoremap <C-Left> :vertical resize +2<CR>
+nnoremap <C-Right> :vertical resize -2<CR>
+nnoremap <C-Up> :resize -2<CR>
+nnoremap <C-Down> :resize +2<CR>
 
 " [[ Tab Movement Remaped ]]
 nnoremap <C-j> <C-W>j
