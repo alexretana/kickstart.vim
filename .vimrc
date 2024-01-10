@@ -248,10 +248,6 @@ inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
 
-" Insert Keymapping - upon hitting enter in bracket, back bracket an extra
-" line. i.e. open up function def
-inoremap <expr> <CR> search('{\%#}', 'n') ? "\<CR>\<CR>\<Up>\<C-f>" : "\<CR>"
-
 " Indent selected lines to the right
 vnoremap <Tab> >gv
 
