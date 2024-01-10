@@ -216,6 +216,11 @@ nnoremap <C-Right> :vertical resize -2<CR>
 nnoremap <C-Up> :resize -2<CR>
 nnoremap <C-Down> :resize +2<CR>
 
+tnoremap <C-Left> :vertical resize +2<CR>
+tnoremap <C-Right> :vertical resize -2<CR>
+tnoremap <C-Up> :resize -2<CR>
+tnoremap <C-Down> :resize +2<CR>
+
 " [[ Tab Movement Remaped ]]
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
@@ -311,6 +316,9 @@ let g:SuperTabDefaultCompletionType = "context"
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+" Update split behavior
+let g:NERDTreeMapSplit = 'botright'
 
 " [[ Configure LSP ]]
 " NOTE: Install new language server using `:LspInstallServer` in the filetype
