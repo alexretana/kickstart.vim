@@ -51,6 +51,9 @@ Plug 'tpope/vim-sleuth'
 " Install surround
 Plug 'tpope/vim-surround'
 
+" Install Delimiter for automatic closing of quotes, parenthesis, ect.
+Plug 'Raimondi/delimitMate'
+
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
 " Install language servers and configure them for vim-lsp
@@ -242,11 +245,6 @@ vnoremap <C-v> "+p
 
 " Map Ctrl+V to paste from system clipboard (force characterwise) in visual mode
 vnoremap <C-V> "+P
-
-" Insert Keymapping for auto close brackets
-inoremap ( ()<Left>
-inoremap [ []<Left>
-inoremap { {}<Left>
 
 " Indent selected lines to the right
 vnoremap <Tab> >gv
