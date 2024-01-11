@@ -57,6 +57,9 @@ Plug 'Raimondi/delimitMate'
 "Install polyglot, a collection of language packs
 Plug 'sheerun/vim-polyglot'
 
+" Vim Highlighter, to set Following Highlight
+Plug 'azabiong/vim-highlighter'
+  
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
 " Install language servers and configure them for vim-lsp
@@ -150,7 +153,8 @@ set switchbuf=uselast
 set wildmenu
 " specifies how command line completion is done
 set wildoptions=pum,tagfile
-
+" Enable cursor line hightlight
+set cursorline
 
 " [[ Settings other options ]]
 " NOTE: You can change these options as you wish!
@@ -408,6 +412,7 @@ autocmd BufEnter * if system('git rev-parse --is-inside-work-tree >/dev/null 2>&
   \ | else
   \ | set noautowrite
   \ | endif
+
 
 " The line beneath this is called `modeline`. See `:help modeline`
 " vim: ts=2 sts=2 sw=2 et
