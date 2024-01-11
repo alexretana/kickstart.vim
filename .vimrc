@@ -54,6 +54,9 @@ Plug 'tpope/vim-surround'
 " Install Delimiter for automatic closing of quotes, parenthesis, ect.
 Plug 'Raimondi/delimitMate'
 
+"Install polyglot, a collection of language packs
+Plug 'sheenrun/vim-polyglot'
+
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
 " Install language servers and configure them for vim-lsp
