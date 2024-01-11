@@ -55,7 +55,7 @@ Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 
 "Install polyglot, a collection of language packs
-Plug 'sheenrun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " Enable LSP
 Plug 'prabirshrestha/vim-lsp'
