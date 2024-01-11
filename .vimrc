@@ -74,8 +74,8 @@ Plug 'liuchengxu/vim-which-key'
 " Adds git related signs to the gutter
 Plug 'airblade/vim-gitgutter'
 
-" Theme inspired by Atom
-Plug 'joshdick/onedark.vim'
+" Theme inspired by nords
+Plug 'iiey/vimcolors'
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
@@ -265,7 +265,7 @@ nnoremap <C-p> :NERDTreeFind<CR>
 
 " [[ Configure plugins ]]
 " Set colorscheme
-colorscheme onedark
+colorscheme nord
 " Characters to render for indentation guide
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
