@@ -152,7 +152,7 @@ set switchbuf=uselast
 " use menu for command line completion
 set wildmenu
 " specifies how command line completion is done
-set wildoptions=pum,tagfile
+" set wildoptions=pum,tagfile
 " Enable cursor line hightlight
 set cursorline
 
