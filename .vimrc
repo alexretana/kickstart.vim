@@ -81,7 +81,8 @@ Plug 'iiey/vimcolors'
 Plug 'vim-airline/vim-airline'
 
 " Add indentation guides even on blank lines
-Plug 'Yggdroot/indentLine'
+" TODO: Find new indent plugin
+" Plug 'Yggdroot/indentLine'
 
 " "gc" to comment visual regions/lines
 Plug 'tpope/vim-commentary'
