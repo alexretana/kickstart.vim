@@ -13,3 +13,5 @@ bsdtar -xf "$INSTALL_PATH/gcmw-v1.20.0.zip" -C "$INSTALL_PATH"
 # Cleanup: Remove the downloaded zip file
 rm "$INSTALL_PATH/gcmw-v1.20.0.zip"
 
+ln -sf ~/kickstart/terminalSetup/.bashrc ~/.bashrc
+
