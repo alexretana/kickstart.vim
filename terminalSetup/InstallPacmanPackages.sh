@@ -1,13 +1,12 @@
-
 #!/bin/bash
 
 # Check if the file exists
-if [ -f "pacman.packages.txt" ]; then
+if [ -f "$HOME/kickstart/terminalSetup/pacman.packages.txt" ]; then
   # Read each line from the file
   while IFS= read -r package; do
-    # Install the package without user confirmation
-    sudo pacman -S --noconfirm "$package"
-  done < "pacman.packages.txt"
+   # Install the package without user confirmation
+    pacman -S --noconfirm "$package"
+  done < "$HOME/kickstart/terminalSetup/pacman.packages.txt"
 else
-  echo "pacman.packages.txt not found."
+  echo "$HOME/kickstart/terminalSetup/pacman.packages.txt"
 fi
