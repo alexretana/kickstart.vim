@@ -96,6 +96,8 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
+" Add Go-plugin
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -413,6 +415,12 @@ autocmd BufEnter * if system('git rev-parse --is-inside-work-tree >/dev/null 2>&
   \ | else
   \ | set noautowrite
   \ | endif
+
+" Go development
+autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType go nmap <Leader>r :GoRun<CR>
+autocmd FileType go nmap <Leader>b :GoBuild<CR>
+let g:go_fmt_command = "goimports"
 
 
 " The line beneath this is called `modeline`. See `:help modeline`
