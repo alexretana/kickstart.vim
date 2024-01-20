@@ -198,3 +198,6 @@ PS1='\[\033]0;\w\007\]\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]$(parse_git_br
 \$ '
 
 export CMAKE_GENERATOR="MinGW Makefiles"
+# set dipslay to connect to x server on local host
+export DISPLAY=localhost:0.0
+
