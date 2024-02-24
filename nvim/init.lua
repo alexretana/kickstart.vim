@@ -76,6 +76,46 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- full ide environtment
+  {'ldelossa/nvim-ide',
+    config = function()
+        -- The configurations provided in the original instructions
+        local bufferlist      = require('ide.components.bufferlist')
+        local explorer        = require('ide.components.explorer')
+        local outline         = require('ide.components.outline')
+        local callhierarchy   = require('ide.components.callhierarchy')
+        local timeline        = require('ide.components.timeline')
+        local terminal        = require('ide.components.terminal')
+        local terminalbrowser = require('ide.components.terminal.terminalbrowser')
+        local changes         = require('ide.components.changes')
+        local commits         = require('ide.components.commits')
+        local branches        = require('ide.components.branches')
+        local bookmarks       = require('ide.components.bookmarks')
+
+        require('ide').setup({
+            icon_set = "codicon",
+            log_level = "info",
+            panels = {
+                left = "explorer",
+                right = "git",
+            },
+            panel_groups = {
+                explorer = { explorer.Name, outline.Name, callhierarchy.Name },
+                terminal = { terminal.Name },
+                git = { changes.Name, commits.Name, timeline.Name, branches.Name }
+            },
+            workspaces = {
+                auto_open = 'left',
+            },
+            panel_sizes = {
+                left = 30,
+                right = 30,
+                bottom = 15
+            }
+        })
+    end
+    },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -285,15 +325,16 @@ vim.o.mouse = 'a'
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
+-- 
 vim.g.clipboard = {
-        name = "clip.exe (Copy Only)",
+        name = "win32yank",
         copy = {
-            ["+"] = "clip.exe",
-            ["*"] = "clip.exe",
+            ["+"] = "win32yank.exe -i --crlf",
+            ["*"] = "win32yank.exe -i --crlf",
         },
         paste = {
-            ["+"] = "clip.exe",
-            ["*"] = "clip.exe",
+            ["+"] = "win32yank.exe -o --lf",
+            ["*"] = "win32yank.exe -o --lf",
         },
         cache_enabled = true,
     }
