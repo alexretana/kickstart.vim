@@ -76,6 +76,15 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- Smooth Scroll
+  {'joeytwiddle/sexy_scroller.vim',
+    config = function()
+      vim.g.SexyScroller_EasingStyle = 3
+      vim.g.SexyScroller_MaxTime = 500
+      vim.g.SexyScroller_CursorTime = 5
+    end
+  },
+
   -- full ide environtment
   {'ldelossa/nvim-ide',
     config = function()
@@ -321,6 +330,9 @@ vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
+
+-- Enable cursorline
+vim.o.cursorline = true
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
