@@ -9,4 +9,5 @@ mingw-w64-x86_64-python
 mingw-w64-x86_64-greenlet
 mingw-w64-x86_64-msgpack
 mingw-w64-x86_64-psutil
+mingw-w64-x86_64-ripgrep
 mingw_w64l-neovim-qt
