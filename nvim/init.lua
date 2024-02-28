@@ -102,19 +102,19 @@ require('lazy').setup({
         local bookmarks       = require('ide.components.bookmarks')
 
         require('ide').setup({
-            icon_set = "codicon",
+            icon_set = "nerd",
             log_level = "info",
             panels = {
                 left = "explorer",
                 right = "git",
             },
             panel_groups = {
-                explorer = { explorer.Name, outline.Name, callhierarchy.Name },
+                explorer = { explorer.Name, outline.Name, callhierarchy.Name},
                 terminal = { terminal.Name },
                 git = { changes.Name, commits.Name, timeline.Name, branches.Name }
             },
             workspaces = {
-                auto_open = 'left',
+                auto_open = 'none',
             },
             panel_sizes = {
                 left = 30,
@@ -175,6 +175,7 @@ require('lazy').setup({
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
       },
+      signcolumn = true,
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
 
