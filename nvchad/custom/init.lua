@@ -5,3 +5,6 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+-- Enable cursorline
+vim.o.cursorline = true
