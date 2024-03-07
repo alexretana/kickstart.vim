@@ -5,18 +5,28 @@ local plugins = {
 
   -- Override plugin definition options
 
+  -- override plugin configs
+  {
+    "williamboman/mason.nvim",
+    opts = overrides.mason
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed =  { "omnisharp"},
+      })
+    end,
+  },
+
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
+      require "mason-lspconfig"
     end, -- Override to setup mason-lspconfig
-  },
-
-  -- override plugin configs
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason
   },
 
   {
@@ -33,7 +43,10 @@ local plugins = {
   {
     "karb94/neoscroll.nvim",
     config = function ()
-      require('neoscroll').setup {}
+      local neoscroll = require('neoscroll')
+      neoscroll.setup({
+        easing_function="circular"
+      })
     end,
     lazy = false
   },

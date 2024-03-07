@@ -28,8 +28,8 @@ M.general = {
     ["J"] = { "mzJ`z", "Join Lines, keep cursor in place"},
 
     -- big moves recenter line
-    ["<C-d>"] = { "<C-d>zz", "Move down and recenter"},
-    ["<C-u>"] = { "<C-u>zz", "Move down and recenter"},
+    -- ["<C-d>"] = { "zz<C-d>", "Move down and recenter"},
+    -- ["<C-u>"] = { "zz<C-u>", "Move down and recenter"},
     ["n"] = { "nzzzv", "Next match and recenter"},
     ["N"] = { "Nzzzv", "Previous match and recenter"},
 

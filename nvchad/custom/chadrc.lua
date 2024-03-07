@@ -5,7 +5,7 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "blossom_light",
+  theme = "sweetpastel",
   theme_toggle = { "blossom_light", "sweetpastel" },
 
   transparency = true,
