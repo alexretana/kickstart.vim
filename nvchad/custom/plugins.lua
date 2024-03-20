@@ -15,7 +15,7 @@ local plugins = {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed =  { "omnisharp"},
+        ensure_installed =  { "omnisharp" },
       })
     end,
   },

@@ -12,6 +12,16 @@ local lspconfig = require "lspconfig"
 --     capabilities = capabilities,
 --   }
 -- end
+lspconfig.jedi_language_server.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  root_dir = function()
+    return vim.loop.cwd()
+  end,
+  cmd = { "jedi-language-server.cmd" }
+
+}
+
 lspconfig.omnisharp.setup {
   on_attach = on_attach,
   capabilities = capabilities,

@@ -42,6 +42,7 @@ M.general = {
     -- fancy search and replace on word cursor is on
       ["<leader>s"] ={ [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Search And Replace Word On Cursor"},
   },
+
   v = {
     [">"] = { ">gv", "indent"},
 

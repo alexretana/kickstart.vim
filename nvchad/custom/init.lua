@@ -8,3 +8,4 @@
 
 -- Enable cursorline
 vim.o.cursorline = true
+vim.o.shellcmdflag = "-c"
